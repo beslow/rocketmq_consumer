@@ -5,3 +5,4 @@ services:
     command: /bin/sh -c ./rocketmq_consumer
     environment:
       - NAME_SERVER_ADDR=192.168.1.11
+      - CUSTOMER_GROUP=group-a

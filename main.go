@@ -15,7 +15,7 @@ func main() {
 	sig := make(chan os.Signal)
 
 	c, _ := rocketmq.NewPushConsumer(
-		consumer.WithGroupName("testGroup"),
+		consumer.WithGroupName(config.Group()),
 		consumer.WithNsResolver(primitive.NewPassthroughResolver([]string{config.NameServerAddr()})),
 	)
 

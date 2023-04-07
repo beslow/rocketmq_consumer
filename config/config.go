@@ -12,6 +12,7 @@ import (
 type Config struct {
 	NameServerAddr string `yaml:"namesrv_addr"`
 	Port           string
+	Group          string
 }
 
 var c Config
@@ -49,4 +50,12 @@ func NameServerAddr() string {
 	addr.Write([]byte(port))
 
 	return addr.String()
+}
+
+func Group() string {
+	if s := os.Getenv("CUSTOMER_GROUP"); s != "" {
+		return s
+	}
+
+	return c.Group
 }
