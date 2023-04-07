@@ -1,3 +1,5 @@
+[![build image](https://github.com/beslow/rocketmq_consumer/actions/workflows/build-image.yml/badge.svg?branch=main)](https://github.com/beslow/rocketmq_consumer/actions/workflows/build-image.yml)
+
 * upload docker-compose.yml
 ```
 scp docker-compose.yml xx@xx:/root/
