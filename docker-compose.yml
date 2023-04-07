@@ -1,0 +1,14 @@
+version: "3"
+services:
+  app:
+    image: beslow/rocketmq_consumer:latest
+    ports:
+      - "80:80"
+    command: /bin/sh -c ./rocketmq_consumer -db:create && ./goblog -db:migrate && ./goblog -db:seed && ./goblog"
+    depends_on:
+      - db
+      - redis
+      - rocketmq_namesrv
+      - rocketmq_broker      
+    networks: 
+      - goblog-net
