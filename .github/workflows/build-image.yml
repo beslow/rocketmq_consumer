@@ -1,4 +1,4 @@
-name: Deployment
+name: build image
 
 concurrency: production
 
